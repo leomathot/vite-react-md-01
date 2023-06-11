@@ -16,7 +16,7 @@ export default function FollowCard({ children="-", userName="", initialIsFollowi
     return(
         <article className="follow-card">
             <header>
-                <img src={`/assets/images/user-card-${children}.jpg`} alt={`${children} avatar`} />
+                <img src={`./assets/images/user-card-${children}.jpg`} alt={`${children} avatar`} />
                 <div>
                     <h3>{children}</h3>
                     <p>@{userName}</p>
