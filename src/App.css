@@ -35,7 +35,6 @@
 }
 
 .app {
-  background-color: var(--black-3);
   padding: 40px 10px;
   display: flex;
   flex-direction: column;

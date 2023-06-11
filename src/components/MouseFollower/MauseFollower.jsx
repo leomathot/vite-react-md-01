@@ -37,8 +37,8 @@ export default function MouseFollower() {
                 borderRadius: "50%",
                 opacity: 0.5,
                 pointerEvents: "none",
-                left: -30,
-                top: -30,
+                left: 10,
+                top: 10,
                 width: 60,
                 height: 60,
                 transform: `translate(${position.x}px, ${position.y}px)`
