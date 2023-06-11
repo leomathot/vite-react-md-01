@@ -5,19 +5,19 @@
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "22d10310",
+      "fileHash": "dcca2cdd",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "77960b60",
+      "fileHash": "5fe4410e",
       "needsInterop": true
     },
     "canvas-confetti": {
       "src": "../../node_modules/canvas-confetti/dist/confetti.module.mjs",
       "file": "canvas-confetti.js",
-      "fileHash": "bcc4577e",
+      "fileHash": "ba086270",
       "needsInterop": false
     }
   },
