@@ -54,13 +54,11 @@ export default function TicTacToe() {
         <article className="app-article" id="tic-tac-toe">
             <h3>Tic Tac Toe</h3>
             <main className="board">
-                
                 <BoardSqures board={board} updateBoard={updateBoard} />
                 
                 <Turn turn={turn} resetGame={resetGame} />
 
                 <WinnerModal winner={winner} resetGame={resetGame} />
-
             </main>
         </article>
     )

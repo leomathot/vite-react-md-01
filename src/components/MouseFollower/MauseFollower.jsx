@@ -31,23 +31,24 @@ export default function MouseFollower() {
     return (
         <article className="app-article" id="mouse-follower">
             <h3>Mouse follower</h3>
-            <div style={{
-                position: "fixed",
-                background: "#09f",
-                borderRadius: "50%",
-                opacity: 0.5,
-                pointerEvents: "none",
-                left: 10,
-                top: 10,
-                width: 60,
-                height: 60,
-                transform: `translate(${position.x}px, ${position.y}px)`
-            }}>
-
-            </div>
-            <button onClick={() => setEnabled(!enabled)}>
-                {enabled ? "Disable" : "Enable"} Mouse Follower
-            </button>
+            <main>
+                <div style={{
+                    position: "fixed",
+                    background: "#09f",
+                    borderRadius: "50%",
+                    opacity: 0.5,
+                    pointerEvents: "none",
+                    left: 10,
+                    top: 10,
+                    width: 60,
+                    height: 60,
+                    transform: `translate(${position.x}px, ${position.y}px)`
+                }}>
+                </div>
+                <button onClick={() => setEnabled(!enabled)}>
+                    {enabled ? "Disable" : "Enable"} Mouse Follower
+                </button>
+            </main>
         </article>
     )
 }
