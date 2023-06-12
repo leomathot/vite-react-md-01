@@ -20,7 +20,7 @@ const users = [
 
 export default function FollowSuggestions() {
     return (
-        <article className="follow-suggestions">
+        <article className="app-article" id="follow-suggestions">
             <h3>Follow Suggestions</h3>
             <main>
                 {

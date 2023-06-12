@@ -51,7 +51,7 @@ export default function TicTacToe() {
     }
     
     return (
-        <article className="tic-tac-toe">
+        <article className="app-article" id="tic-tac-toe">
             <h3>Tic Tac Toe</h3>
             <main className="board">
                 

@@ -6,12 +6,14 @@ import './App.css'
 
 function App() {
   return (
-    <section className='app'>
-      <h1>React md 01</h1>
-      <FollowSuggestions />
-      <TicTacToe />
-      <MouseFollower />
-      <FetchingTest />
+    <section id='app'>
+      <h1>Vite React md 01</h1>
+      <article id="app-content">
+        <FollowSuggestions />
+        <TicTacToe />
+        <MouseFollower />
+        <FetchingTest />
+      </article>
     </section>
   )
 }

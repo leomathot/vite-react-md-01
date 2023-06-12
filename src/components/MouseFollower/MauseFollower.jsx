@@ -29,7 +29,7 @@ export default function MouseFollower() {
     }, [enabled])
 
     return (
-        <article className="mouse-follower">
+        <article className="app-article" id="mouse-follower">
             <h3>Mouse follower</h3>
             <div style={{
                 position: "fixed",

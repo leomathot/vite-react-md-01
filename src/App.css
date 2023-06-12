@@ -30,33 +30,35 @@
   --red-1: #d03030;
 }
 
-.app-cont {
-  border: 2px solid green;
+#app {
+  padding: 30px 10px;
 }
 
-.app {
+#app-content {
   padding: 40px 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
   gap: 25px;
   width: 95vw;
-  min-height: 150vh;
+}
+
+.app-article {
+  background-color: var(--black-1);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: fit-content;
+  min-height: 150px;
+  min-width: 300px;
 }
 
 /* ***** Following suggestions ***** */
 
-.follow-suggestions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: var(--black-1);
-}
-
-.follow-suggestions main {
+#follow-suggestions main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,16 +74,16 @@
   padding: 10px;
   text-align: left;
   display: flex;
-  gap: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: center;
-  justify-content: space-between;
-  width: 400px;
-  box-shadow: 0 0 10px -5px var(--black-3);
+  justify-content: center;
+  width: 100%;
 }
 
 .follow-card header {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   width: 250px;
 }
@@ -99,10 +101,10 @@
   color: var(--black-2);
   border: 2px solid var(--white);
   height: fit-content;
-  padding: 10px;
+  padding: 10px 0;
   border-radius: 10px;
   transition: .3s ease background-color, .3s ease color;
-  width: 130px;
+  width: 120px;
 }
 
 .follow-card button:hover {
@@ -115,7 +117,6 @@
   background-color: transparent;
   color: var(--white);
   border: 2px solid var(--white);
-  width: 130px;
 }
 
 .follow-card .following:hover {
@@ -142,7 +143,7 @@
 
 /* ***** Tic Tac Toe ***** */
 
-.tic-tac-toe {
+#tic-tac-toe {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,22 +153,20 @@
   background-color: var(--black-1);
 }
 
-.tic-tac-toe main {
+#tic-tac-toe .board {
   position: relative;
   padding: 5px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-}
-
-.tic-tac-toe .board {
   width: fit-content;
   margin: auto;
   text-align: center;
 }
 
-.tic-tac-toe .board .board-squares {
+#tic-tac-toe .board .board-squares {
+  width: 100%;
   background-color: var(--black-3);
   padding: 8px;
   border-radius: 10px;
@@ -176,7 +175,7 @@
   gap: 10px;
 }
 
-.tic-tac-toe .square {
+#tic-tac-toe .square {
   width: 100px;
   height: 100px;
   border: 2px solid var(--gray-2);
@@ -187,11 +186,11 @@
   font-size: 48px;
 }
 
-.tic-tac-toe .square:hover {
+#tic-tac-toe .square:hover {
   border: 2px solid var(--white);;
 }
 
-.tic-tac-toe .turn {
+#tic-tac-toe .turn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,7 +201,7 @@
   border-radius: 10px;
 }
 
-.tic-tac-toe .turn .square {
+#tic-tac-toe .turn .square {
   width: 50px;
   height: 50px;
   background-color: var(--black-3);
@@ -211,12 +210,12 @@
   font-size: 30px;
 }
 
-.tic-tac-toe .turn .is-selected {
+#tic-tac-toe .turn .is-selected {
   color: #fff;
   background: var(--blue-3);
 }
 
-.tic-tac-toe .winner {
+#tic-tac-toe .winner {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -228,14 +227,14 @@
   border-radius: 10px;
 }
 
-.tic-tac-toe .winner .square {
+#tic-tac-toe .winner .square {
   width: 60px;
   height: 60px;
   pointer-events: none;
   border-color: transparent;
 }
 
-.tic-tac-toe .winner .text {
+#tic-tac-toe .winner .text {
   background: rgba(0, 0, 0, 0.85);
   border: 2px solid var(--white);
   border-radius: 10px;
@@ -248,7 +247,7 @@
   gap: 80px;
 }
 
-.tic-tac-toe .board button {
+#tic-tac-toe .board button {
   padding: 5px 15px;
   background: transparent;
   border: 2px solid var(--white);
@@ -259,24 +258,24 @@
   cursor: pointer;
 }
 
-.tic-tac-toe .board button:hover {
+#tic-tac-toe .board button:hover {
   background: var(--white);
   color: var(--black-4);
 }
 
 /* ***** Mouse Follower ***** */
 
-.mouse-follower a {
+#mouse-follower a {
   font-weight: 500;
   color: var(--blue-4);
   text-decoration: inherit;
 }
 
-.mouse-follower a:hover {
+#mouse-follower a:hover {
   color: var(--blue-1);
 }
 
-.mouse-follower {
+#mouse-follower {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -286,12 +285,12 @@
   background-color: var(--black-1);
 }
 
-.mouse-follower h1 {
+#mouse-follower h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-.mouse-follower button {
+#mouse-follower button {
   padding: 5px 15px;
   background: transparent;
   border: 2px solid var(--white);
@@ -302,20 +301,20 @@
   cursor: pointer;
 }
 
-.mouse-follower button:hover {
+#mouse-follower button:hover {
   background-color: var(--white);
   color: var(--black-4);
 }
 
 @media (prefers-color-scheme: light) {
-  .mouse-follower {
+  #mouse-follower {
     color: var(--gray-4);
     background-color: var(--white);
   }
-  .mouse-follower a:hover {
+  #mouse-follower a:hover {
     color: var(--blue-3);
   }
-  .mouse-follower button {
+  #mouse-follower button {
     background-color: var(--white);
   }
 }
@@ -323,3 +322,7 @@
 body.no-cursor {
   cursor: none;
 }
+
+/* ***** Fetching test ***** */
+
+
