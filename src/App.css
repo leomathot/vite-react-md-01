@@ -319,23 +319,42 @@
   color: var(--black-4);
 }
 
-@media (prefers-color-scheme: light) {
-  #mouse-follower {
-    color: var(--gray-4);
-    background-color: var(--white);
-  }
-  #mouse-follower a:hover {
-    color: var(--blue-3);
-  }
-  #mouse-follower button {
-    background-color: var(--white);
-  }
-}
-
 body.no-cursor {
   cursor: none;
 }
 
 /* ***** Fetching test ***** */
 
+#fetching-test main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+}
 
+#fetching-test .fact-cont {
+  background-color: var(--black-3);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:15px;
+}
+
+#fetching-test button {
+  width: fit-content;
+  padding: 5px 15px;
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  border-radius: 5px;
+  transition: 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#fetching-test button:hover {
+  background-color: var(--white);
+  color: var(--black-4);
+}
