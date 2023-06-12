@@ -1,6 +1,7 @@
 import FollowSuggestions from './components/Followsuggestions/FollowSuggestions'
 import TicTacToe from './components/TicTacToe/TicTacToe'
 import MouseFollower from './components/MouseFollower/MauseFollower'
+import FetchingTest from './components/Fetchingtest/FetchingTest'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <FollowSuggestions />
       <TicTacToe />
       <MouseFollower />
+      <FetchingTest />
     </section>
   )
 }
