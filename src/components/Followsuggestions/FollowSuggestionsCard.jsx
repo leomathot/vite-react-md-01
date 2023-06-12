@@ -18,8 +18,8 @@ export default function FollowCard({ children="-", userName="", initialIsFollowi
             <header>
                 <img src={`./assets/images/user-card-${children}.jpg`} alt={`${children} avatar`} />
                 <div>
-                    <h3>{children}</h3>
-                    <p>@{userName}</p>
+                    <h4>{children}</h4>
+                    <p className="card-user-name">@{userName}</p>
                 </div>
             </header>
             <button className={btnClassName} onClick={handleClick}>

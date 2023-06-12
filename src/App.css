@@ -31,17 +31,21 @@
 }
 
 #app {
-  padding: 30px 10px;
+  border: 2px solid red;
+  padding: 30px 5px;
+  max-width: 95vw;
+  overflow: hidden;
 }
 
 #app-content {
+  border: 2px solid red;
   padding: 40px 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  gap: 25px;
-  width: 95vw;
+  column-gap: 20px;
+  row-gap: 30px;
 }
 
 .app-article {
@@ -53,7 +57,8 @@
   gap: 15px;
   height: fit-content;
   min-height: 150px;
-  min-width: 300px;
+  width: 100%;
+  max-width: 450px;
 }
 
 /* ***** Following suggestions ***** */
@@ -71,21 +76,24 @@
 .follow-card {
   background-color: var(--dark-blue-3);
   border-radius: 15px;
-  padding: 10px;
+  padding: 10px 5px;
   text-align: left;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  column-gap: 10px;
+  row-gap: 20px;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
 .follow-card header {
+  border: 2px solid red;
+  /* flex: 200px; */
   display: flex;
   gap: 10px;
   align-items: center;
-  width: 250px;
+  width: 60%;
 }
 
 .follow-card img {
@@ -95,7 +103,12 @@
   border-radius: 50%;
 }
 
+.card-user-name {
+  font-size: 0.9rem;
+}
+
 .follow-card button {
+  /* flex: 0 0 100px; */
   cursor: pointer;
   background-color: var(--white);
   color: var(--black-2);
@@ -104,7 +117,7 @@
   padding: 10px 0;
   border-radius: 10px;
   transition: .3s ease background-color, .3s ease color;
-  width: 120px;
+  width: 30%;
 }
 
 .follow-card button:hover {
