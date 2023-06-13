@@ -342,6 +342,11 @@ body.no-cursor {
   gap:15px;
 }
 
+#fetching-test img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 #fetching-test button {
   width: fit-content;
   padding: 5px 15px;
