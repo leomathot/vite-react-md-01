@@ -12,10 +12,12 @@ export default function MouseFollower() {
         }
         if (enabled) {
             window.addEventListener("pointermove", handleMove)
+            document.querySelector(".mouse-follower").classList.remove("hidden-follower")
         }
 
         return () => {
             window.removeEventListener("pointermove", handleMove)
+            document.querySelector(".mouse-follower").classList.add("hidden-follower")
         }
 
     }, [enabled])
@@ -32,14 +34,14 @@ export default function MouseFollower() {
         <article className="app-article" id="mouse-follower">
             <h3>Mouse follower</h3>
             <main>
-                <div style={{
+                <div className="mouse-follower hidden-follower" style={{
                     position: "fixed",
                     background: "#09f",
                     borderRadius: "50%",
-                    opacity: 0.5,
+                    opacity: 0.35,
                     pointerEvents: "none",
-                    left: 10,
-                    top: 10,
+                    left: -30,
+                    top: -30,
                     width: 60,
                     height: 60,
                     transform: `translate(${position.x}px, ${position.y}px)`

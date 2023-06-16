@@ -9,7 +9,9 @@ export default function FetchingTest() {
     const [fact, setFact] = useState()
     const [longestWord, setLongestWord] = useState()
     const [imageUrl, setImageUrl] = useState()
+    const [factCounter, setfactCounter] = useState(1)
     // const [fact2, setFact2] = useState()
+    // const getFactBtn = document.querySelector(".get-fact-btn")
 
     useEffect(() => {
 
@@ -32,16 +34,7 @@ export default function FetchingTest() {
                 })
                 setLongestWord(longestWordInFact)
                     console.log(longestWordInFact)
-
-                // fetching image from longest word in fact 1
-                let fetchingUrl = `${CAT_IMAGES_URL}${longestWordInFact}`
-                fetch(fetchingUrl)
-                    .then(data => {
-                        setImageUrl(data.url)
-                        console.log(fetchingUrl)
-                    })
             })
-        
 
         // fetching fact 2 with async await
         // async function fetchFact2() {
@@ -51,7 +44,19 @@ export default function FetchingTest() {
         // }
         // fetchFact2()
 
-    }, [])
+    }, [factCounter]) // the button changes factCounter and triggers the fetching
+
+    useEffect(() => {
+        
+        // fetching image from longest word in fact 1
+        if(!longestWord) return
+        let fetchingUrl = `${CAT_IMAGES_URL}${longestWord}`
+        fetch(fetchingUrl)
+            .then(data => {
+                setImageUrl(data.url)
+                console.log(fetchingUrl)
+            })
+    }, [longestWord])
 
     return (
         <article className="app-article" id="fetching-test">
@@ -60,7 +65,9 @@ export default function FetchingTest() {
                 <div className="fact-cont">
                     {fact && <p>{fact}</p>}
                     <img src={imageUrl} alt={`cat photo for the word ${longestWord}`}/>
-                    <button>New fact</button>
+                    <button className="get-fact-btn" onClick={() => setfactCounter(factCounter + 1)}>
+                        New fact ({factCounter})
+                    </button>
                 </div>
 
                 {/* <div className="fact-cont">
