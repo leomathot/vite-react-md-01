@@ -1,7 +1,7 @@
-import FollowSuggestions from './components/Followsuggestions/FollowSuggestions'
+import FollowSuggestions from './components/FollowSuggestions/FollowSuggestions'
 import TicTacToe from './components/TicTacToe/TicTacToe'
 import MouseFollower from './components/MouseFollower/MauseFollower'
-import FetchingTest from './components/Fetchingtest/FetchingTest'
+import FetchingCatfactAndImage from './components/FetchingCatFactAndImage/FetchingCatfactAndImage'
 import './App.css'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <FollowSuggestions />
         <TicTacToe />
         <MouseFollower />
-        <FetchingTest />
+        <FetchingCatfactAndImage />
       </article>
     </section>
   )

@@ -332,6 +332,7 @@ body.no-cursor {
 }
 
 #fetching-test .fact-cont {
+  width: 100%;
   background-color: var(--black-3);
   padding: 10px;
   border-radius: 10px;
@@ -343,6 +344,9 @@ body.no-cursor {
 
 #fetching-test img {
   width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
