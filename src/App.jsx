@@ -1,4 +1,4 @@
-import FollowSuggestions from './components/FollowSuggestions/FollowSuggestions'
+import FollowSuggestions from './components/Followsuggestions/FollowSuggestions'
 import TicTacToe from './components/TicTacToe/TicTacToe'
 import MouseFollower from './components/MouseFollower/MauseFollower'
 import FetchingCatFactAndImage from './components/FetchingCatFactAndImage/FetchingCatfactAndImage'
