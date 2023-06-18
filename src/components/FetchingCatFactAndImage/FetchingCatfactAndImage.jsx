@@ -2,7 +2,7 @@ import useCatFact from "./Hooks/useCatFact.js"
 import useCatImage from "./Hooks/useCatImage.js"
 
 // FetchingTest component 
-export default function FetchingCatfactAndImage() {
+export default function FetchingCatFactAndImage() {
 
     const { fact, getNewFact } = useCatFact()
     const { imageUrl } = useCatImage({ fact })
