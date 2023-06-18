@@ -2,7 +2,7 @@
 import { useState } from "react"
 
 // eslint-disable-next-line react/prop-types
-export default function FollowCard({ children="-", userName="", initialIsFollowing }) {
+export default function FollowSuggestionsCard({ children="-", userName="", initialIsFollowing }) {
 
     const [isFollowing, setIsFollowing] = useState(initialIsFollowing)
 
