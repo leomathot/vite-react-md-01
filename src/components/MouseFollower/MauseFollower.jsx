@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 export default function MouseFollower() {
 
     const [enabled, setEnabled] = useState(false)
-    const [position, setPositon] = useState({ x: 0, y: 0 }) 
+    const [position, setPositon] = useState({ x: -100, y: -100 }) 
 
     useEffect(() => {
         const handleMove = (event) => {

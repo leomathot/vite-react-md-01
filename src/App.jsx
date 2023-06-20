@@ -2,6 +2,7 @@ import FollowSuggestions from './components/Followsuggestions/FollowSuggestions'
 import TicTacToe from './components/TicTacToe/TicTacToe'
 import MouseFollower from './components/MouseFollower/MauseFollower'
 import FetchingCatFactAndImage from './components/FetchingCatFactAndImage/FetchingCatfactAndImage'
+import MovieApp from './components/MovieApp/MovieApp' 
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <TicTacToe />
         <MouseFollower />
         <FetchingCatFactAndImage />
+        <MovieApp />
       </article>
     </section>
   )
