@@ -89,6 +89,10 @@ input {
   border-radius: 5px;
 }
 
+li {
+  list-style: none;
+}
+
 /* ***** Following suggestions ***** */
 
 #follow-suggestions main {
@@ -353,6 +357,7 @@ body.no-cursor {
 }
 
 #movie-app main {
+  width: 100%;
   background-color: var(--black-3);
   padding: 15px 5px;
   border-radius: 10px;
@@ -368,23 +373,33 @@ body.no-cursor {
   gap: 10px;
 }
 
+#movie-search-results {
+  width: 100%;
+}
+
 #movie-search-results ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
 #movie-search-results li {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
   gap: 10px;
-  background-color: var(--black-4);
+  background-color: var(--dark-blue-4);
+  box-shadow: 0 0 10px -3px black;
   padding: 10px 5px 5px 5px;
   border-radius: 10px;
   max-width: 300px;
+}
+
+#movie-search-results li header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #movie-search-results li img {
