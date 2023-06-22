@@ -3,13 +3,10 @@ import { useSearch } from "./hooks/useSearch"
 import { useMovies } from "./hooks/useMovies"
 // import { useRef } from "react"
 
-// const OMDB_API_URL = "http://www.omdbapi.com/?apikey=[yourkey]&"
-// const API_KEY = "fe8974bf"
-
 // MovieApp component
 export default function MovieApp() {
     const { searchInput, setSearchInput, error } = useSearch()
-    const movies = useMovies()
+    const { movies, getMovies, loading } = useMovies({ searchInput})
     // const inputRef = useRef()
 
     // const handleSubmit = (e) => {
@@ -22,7 +19,7 @@ export default function MovieApp() {
         event.preventDefault()
         // const fields = Object.fromEntries(new window.FormData(event.target))
         // const searchInput = fields["search-input"]
-        console.log(searchInput)
+        getMovies()
     }
 
     // to make the input controlled
@@ -57,7 +54,9 @@ export default function MovieApp() {
                 {(error)? (<p className="error-message" style={{color: "red"}}>{error}</p>) : null}
 
                 <div id="movie-search-results">
-                    <MoviesResult movies={movies} />
+                    {
+                        loading ? <p>Loading ...</p> : <MoviesResult movies={movies} />
+                    }
                 </div>
 
             </main>
