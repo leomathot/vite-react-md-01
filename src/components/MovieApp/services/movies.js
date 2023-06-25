@@ -2,7 +2,7 @@
 // import mockResultsFailure from "../mocks/results-failure.json"
 
 const API_KEY = "fe8974bf"
-const OMDB_API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=`
+const OMDB_API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&s=`
 
 export const searchMovies = async ({ searchInput }) => {
     if (searchInput === "") return null
