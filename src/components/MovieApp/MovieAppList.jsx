@@ -19,8 +19,7 @@ export function MoviesFound({ movies }) {
 
 export function NoMoviesFound() {
     return (
-        // <p>No movies found!</p>
-        null
+        <p>No movies found!</p>
     )
 }
 

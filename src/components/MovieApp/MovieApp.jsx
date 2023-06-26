@@ -1,12 +1,14 @@
 import { MoviesResult } from "./MovieAppList"
 import { useSearch } from "./hooks/useSearch"
 import { useMovies } from "./hooks/useMovies"
+import { useState } from "react"
 // import { useRef } from "react"
 
 // MovieApp component
 export default function MovieApp() {
+    const [ sort, setSort ] = useState(false)
     const { searchInput, setSearchInput, error } = useSearch()
-    const { movies, getMovies, loading } = useMovies({ searchInput})
+    const { movies, getMovies, loading } = useMovies({ searchInput, sort })
     // const inputRef = useRef()
 
     // const handleSubmit = (e) => {
@@ -19,13 +21,19 @@ export default function MovieApp() {
         event.preventDefault()
         // const fields = Object.fromEntries(new window.FormData(event.target))
         // const searchInput = fields["search-input"]
-        getMovies()
+        getMovies({ searchInput })
+    }
+
+    const handleSort = () => {
+        setSort(!sort)
     }
 
     // to make the input controlled
     const handleChange = (event) => {
-        // if (event.target.value.startsWith(" ")) return
-        setSearchInput(event.target.value)
+        const newInput = event.target.value
+        // if (newInput.startsWith(" ")) return
+        setSearchInput(newInput)
+        // getMovies({ searchInput: newInput })
     }
 
     return (
@@ -49,6 +57,7 @@ export default function MovieApp() {
                             placeholder="Batman"
                         />
                     </label>
+                    <input type="checkbox" name="sort" onChange={handleSort} checked={sort} />
                     <button type="submit">Search</button>
                 </form>
                 {(error)? (<p className="error-message" style={{color: "red"}}>{error}</p>) : null}

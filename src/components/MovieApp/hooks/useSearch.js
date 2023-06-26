@@ -15,10 +15,6 @@ export function useSearch() {
             setError("The input is empty")
             return
         }
-        if (searchInput.match(/^\d+$/)) {
-            setError("Type at least a word")
-            return
-        }
         if (searchInput.length < 3) {
             setError("Type a longer word")
             return
